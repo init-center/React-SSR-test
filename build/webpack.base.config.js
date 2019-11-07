@@ -1,8 +1,8 @@
 const path = require('path')
 
 module.exports = {
-    mode: 'production',
-    devtool: 'cheap-module-source-map',
+    mode: 'development',
+    devtool: 'cheap-module-eval-source-map',
     output: {
         filename: '[name].js',
         path: path.resolve(__dirname, '../dist')
