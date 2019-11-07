@@ -4,6 +4,6 @@ const clientConfig = require('./webpack.client.config')
 const serverConfig = require('./webpack.server.config')
 
 module.exports = (env) => {
-    let config = env.server ? serverConfig : clientConfig
+    let config = env && env.server ? serverConfig : clientConfig
     return merge(baseConfig, config)
 }

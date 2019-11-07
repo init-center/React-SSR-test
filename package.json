@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "npm-run-all --parallel dev:**",
     "dev:start": "nodemon --watch dist --exec node \"./dist/server.js\"",
-    "dev:build": "webpack --env.server --config ./build/webpack.config.js --watch"
+    "dev:build:server": "webpack --env.server --config ./build/webpack.config.js --watch",
+    "dev:build:client": "webpack --config ./build/webpack.config.js --watch"
   },
   "keywords": [],
   "author": "",
@@ -14,12 +15,14 @@
   "dependencies": {
     "koa": "^2.11.0",
     "koa-router": "^7.4.0",
+    "koa-static": "^5.0.0",
     "react": "^16.11.0",
     "react-dom": "^16.11.0"
   },
   "devDependencies": {
     "@types/koa": "^2.0.51",
     "@types/koa-router": "^7.0.42",
+    "@types/koa-static": "^4.0.1",
     "@types/react": "^16.9.11",
     "@types/react-dom": "^16.9.4",
     "nodemon": "^1.19.4",
